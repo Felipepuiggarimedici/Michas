@@ -267,7 +267,7 @@ p {
     display: none; }
   .websiteContact {
     margin-right: 5%;
-    margin-left: 5%; }
+    margin-left: 2%; }
   .websiteContact {
     grid-template-columns: 5fr 7fr 20fr 17fr;
     font-size: medium; } }
@@ -283,12 +283,12 @@ p {
     display: none; }
   .websiteContact {
     margin-right: 5%;
-    margin-left: 5%; }
+    margin-left: 2%; }
   .websiteContact {
     grid-template-columns: 5fr 4fr 14fr 17fr;
     font-size: small; } }
 
-@media only screen and (min-width: 360px) and (max-width: 465px) {
+@media only screen and (min-width: 381px) and (max-width: 465px) {
   .footerSeccionDeContacto {
     font-size: 60%; }
   .informacionDeContacto {
@@ -299,12 +299,12 @@ p {
     display: none; }
   .websiteContact {
     margin-right: 5%;
-    margin-left: 5%; }
+    margin-left: 2%; }
   .websiteContact {
     grid-template-columns: 5fr 1fr 15fr 17fr;
-    font-size: 60%; } }
+    font-size: 80%; } }
 
-@media only screen and (max-width: 359px) {
+@media only screen and (max-width: 380px) {
   .footerSeccionDeContacto {
     font-size: 60%; }
   .informacionDeContacto {
@@ -315,10 +315,10 @@ p {
     display: none; }
   .websiteContact {
     margin-right: 5%;
-    margin-left: 5%; }
+    margin-left: 2%; }
   .websiteContact {
     grid-template-columns: 5fr 1fr 15fr 17fr;
-    font-size: x-small; } }
+    font-size: 55%; } }
 
 /*Pantalla de carga*/
 .pantallaDeCarga {

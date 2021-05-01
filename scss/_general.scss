@@ -306,7 +306,7 @@ p{
     .websiteContact {
         margin : {
             right: 5%;
-            left: 5%;
+            left: 2%;
         }
     }
     .websiteContact {
@@ -321,11 +321,11 @@ p{
 @media only screen and (min-width: 466px) and (max-width: 600px) {
     @include hacerFooterResponsive(50%, large, x-large,5fr 4fr 14fr 17fr, small);
 }
-@media only screen and (min-width: 360px) and (max-width: 465px) {
-    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, 60%);
+@media only screen and (min-width: 381px) and (max-width: 465px) {
+    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, 80%);
 }
-@media only screen and (max-width: 359px) {
-    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, x-small);
+@media only screen and (max-width: 380px) {
+    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, 55%);
 }
 
 /*Pantalla de carga*/
