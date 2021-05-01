@@ -322,6 +322,18 @@ class Carrito {
                       <td class="border-0 align-middle containerDeBotonEnCarrito"><button id="botonEnCarritoParaRemoverProducto${productoParaAgregar.codigoDeProducto}" class="textoClaro btn cart px-auto botonParaRemoverDelCarrito"><i class="bi bi-trash"></i></button></td>
                     </tr>`;
         }
+        if(this.elementosSeleccionados == 0) {
+            tabla = `${tabla}
+                            <tr>
+                                <th class="border-0">
+                                    <div class="p-2">
+                                        <div class="ml-3 d-inline-block align-middle">
+                                            <h5 class="mb-0">El carrito está vacío</h5>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>`;
+        }
         if (display.length == 0) {
             tabla = `${tabla} 
             <tr>
@@ -349,7 +361,6 @@ class Carrito {
                 </div>
                 </div>`;
         $("#tablaDeCarrito").append(tabla);
-
         this.initilializeCarritoButtons();
     }
 
