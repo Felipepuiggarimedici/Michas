@@ -1,0 +1,173 @@
+/*index*/
+#inicio {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 32% 68%; 
+}
+#containerDentroDeGrid {
+    background-color: #B39A93;
+}
+#containerPrincipalEnIndex {
+    height: 100%;
+    @extend .centrarHijosConFlex;
+    flex-direction: column;
+    height: 100%;
+}
+#tituloEnIndex {
+    @extend .centrarHijosConFlex;
+    flex-direction: column;
+    width: 100%;
+    height:50%;
+}
+#containerParaLogoEnIndex{
+    width: 50%;
+    @extend .centrarHijosConFlex;
+}
+#logoEnIndex {
+    margin-left: 0;
+    max-height: 100%;
+    width: 80%;
+    animation-name: logoAnimado;
+    animation-duration: 3s;
+}
+@keyframes logoAnimado {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+#tituloPrincipal {
+    display: none;
+}
+.slogan {
+    color: #C3C9CE;
+    text-transform: uppercase;
+    font-family: "constantia", sans-serif;
+    font-size: 160%;
+    animation-name: sloganAnimado;
+    animation-duration: 3s;
+    text-align: center;
+}
+@keyframes sloganAnimado {
+    0% {
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px);
+        opacity: 100%;
+    }
+}
+.containerDeImagen {
+    background-color: #B39A93;
+}
+#imagenInicio1 {
+    @extend .contenerImagenDefault;
+    border-radius: 40px;
+}
+#inicio2 {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 58% 42%; 
+}
+#imagenInicio2 {
+    @extend .contenerImagenDefault;
+    border-radius: 50px 0 0px 50px;
+}
+#publicidad {
+    display: flex;
+    justify-self: center;
+    align-items: flex-start;
+    width: 100%;
+    background-image: url("../imagenes/pastelera.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+#containerDeSlogan2 {
+    margin-top: 2%;
+    width: 100%;
+    height: 20%;
+    /*transforma en paralelogramo el container*/
+    transform: skew(20deg);
+    background: #231F20;
+    border-radius: 50px;
+    @extend .centrarHijosConFlex;
+}
+.sloganEnParalelogramo {
+    /*revierte el efecto del paralelogramo en el slogan*/
+    margin-top: 2%;
+    transform: skew(-20deg);
+}
+@media only screen and (min-width: 421px) and (max-width: 768px) {
+    
+    #inicio {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    #tituloEnIndex {
+        height: 400px;
+    }
+    img {
+        border-radius: 0 !important;
+    }
+    #publicidad {
+        background-image: none;
+    }
+    #containerDeSlogan2 {
+        transform: none;
+        height: 100%;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    .sloganEnParalelogramo {
+        margin-top: 0%;
+        transform: skew(5deg);
+    }
+}
+@media only screen and (max-width: 420px) {
+    #inicio {
+        grid-template-columns: 100%;
+    }
+    #tituloEnIndex {
+        height: 200px;
+    }
+    .slogan {
+        font-size: medium;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .sloganEnParalelogramo {
+        font-size: medium;
+    }
+    #containerParaLogoEnIndex {
+        height: 30%;
+        width: 30%;
+    }
+    .slogan {
+        font-size: smaller;
+    }
+    #imagenInicio1 {
+        border-radius: 0;
+    }
+    #imagenInicio2 {
+        border-radius: 0;
+    }
+    #inicio2 {
+        grid-template-columns: 50% 50%; 
+    }
+    #publicidad {
+        background-image: none;
+    }
+    #containerDeSlogan2 {
+        transform: none;
+        height: 100%;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}

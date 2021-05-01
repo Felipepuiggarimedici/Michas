@@ -1,0 +1,83 @@
+
+/*pagina de productos*/
+.containerDeProducto {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    @extend .centrarHijosConFlex;
+}
+.containerDeImagenDeProducto {
+    width: 70%;
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 30px;
+    background-color: #B39A93;
+    @extend .centrarHijosConFlex;
+}
+.imagenDeProductos {
+    width: 80%;
+    height: 90%;
+}
+.textoDescriptivo {
+    @extend .centrarHijosConFlex;
+    margin-left: 4%;
+    font-family: "constantia";
+    font-size: xx-large;
+}
+.imagenDeProductos {
+    @extend .centrarHijosConFlex;
+}
+.itemsDebajoDeProducto {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding: 2%;
+}
+.precioEnProductoExpandido {
+    font-family: "constantia";
+    font-size:xx-large;
+    @extend .centrarHijosConFlex;
+}
+.imagenDeProductos {
+    @extend .contenerImagenDefault;
+    border-radius: 9px;
+}
+.botonParaVolverATienda {
+    background-color: #966E65;
+    @extend .centrarHijosConFlex;
+    z-index: 2;
+    height: 9vh;
+    width: 9vh;
+    padding: 0;
+    border: 0;
+    padding: 10px;
+    box-shadow: 2px 2px 3px #231F20;
+    font-size: x-large;
+}
+
+@mixin hacerProductosResponsive($heightWidth, $gridTemplateDeItemsDebajoDeProducto, $tituloEnProductoEdit) {
+    .botonParaVolverATienda {
+        height: $heightWidth;
+        width: $heightWidth;
+        font-size: large;
+    }
+    .itemsDebajoDeProducto {
+        grid-template-columns: $gridTemplateDeItemsDebajoDeProducto;
+    }
+    @if ($tituloEnProductoEdit != undefined) {
+        .tituloEnProducto h1{
+            font-size: x-large;
+            text-align: center;
+        }
+    }
+}
+@media only screen and (min-width: 731px) and (max-width: 1153px) {
+    @include hacerProductosResponsive(6vh, 10% 30% 30% 10% 20%, undefined);
+}
+@media only screen and (min-width: 401px) and (max-width: 730px) {
+    @include hacerProductosResponsive(6vh, 0% 45% 45% 0% 10%, yes);
+}
+@media only screen and (max-width: 400px) {
+    @include hacerProductosResponsive(4vh, 0% 45% 45% 0% 10%, yes);
+}

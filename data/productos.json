@@ -1,0 +1,4 @@
+[{"nombre": "Cheesecake", "precio": 300, "codigoDeProducto": 0, "imagen": "cheesecake.jpg"},
+{"nombre": "Pastafrola", "precio": 400, "codigoDeProducto": 1, "imagen": "pastafrola.jpg"},
+{"nombre": "Crumble de manzana", "precio": 330, "codigoDeProducto": 2, "imagen": "appleCrumble.jpg"},
+{"nombre": "Torta Rogel", "precio": 500, "codigoDeProducto": 3, "imagen": "rogel.jpg"}]

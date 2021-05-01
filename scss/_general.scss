@@ -1,0 +1,346 @@
+/*Incluye los fonts descargado en el archivo*/
+@font-face {
+    font-family: constantia;
+    src: url("../font/constantiaFont.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    /*Hace que las animaciones esperen a la pantalla de carga para comenzar. Se quita esta propiedad con jquey luego*/
+    animation-play-state: paused;
+}
+hr {
+   display: none;
+}
+main {
+    background-color: #231F20;
+}
+body {
+    background-color: #966E65;
+    min-height: 100vh;
+    height: 100%;
+}
+h1 {
+    font-family: "constantia";
+    color: #C3C9CE;
+    padding: 4%;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+.textoClaro {
+    color: #C3C9CE;
+}
+ul {
+    list-style-position: inside;
+}
+p{
+    margin: 0;
+}
+.imagenEnContainer {
+    @extend .contenerImagenDefault;
+    border-radius: 20px;
+}
+.btn:hover {
+    color:#C3C9CE;
+}
+/*header*/
+.defaultHeader {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #966E65;
+    opacity: 0.8;
+}
+.innerHeader {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr 15fr 32fr;
+}
+.containerDeLogoEnHeader {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoEnHeader {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-left: 4%;
+}
+.listForNavBar {
+    list-style-type: none;
+    height: 100%;
+    display: inline;
+}
+.headerLinks {
+    float: right;
+    text-align: center;
+    padding: 17px 21px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "constantia";
+    font-size: larger;
+    width: 26%;
+}
+.headerLinks a{
+    text-decoration: none;
+    color: #C3C9CE;
+    font-size: 140%;
+}
+.headerLinks a:hover{
+    text-decoration: underline;
+}
+.headerLinks a i {
+    font-size: 180%;
+}
+.menuDesplegableParaPantallasChicas {
+    display: none;
+}
+.contenidoParaDesplegable {
+    display: none;
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .innerHeader {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .logoEnHeader {
+        display: none;
+    }
+    .blankSpaceEnHeader {
+        display: none;
+    }
+    .headerLinks {
+        float: left;
+        margin-right: 7%;
+    }
+}   
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+    .innerHeader {
+        grid-template-columns: 1fr 15fr 15fr 20fr;
+    }
+    .menuParaPantallasNormales {
+        display: none;
+    }    
+    .menuDesplegableParaPantallasChicas {   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .botonParaMenuDesplegable {
+        border-radius: 10px;
+        width: 50%;
+        height: 50%;
+        background-color: #231F20;
+        color:#C3C9CE;
+        font-family: "gothic";
+        font-size: small;
+    }
+    .contenidoParaDesplegable {
+        display: none;
+        position: absolute;
+        background-color: #B39A93;
+    }
+    .contenidoParaDesplegable a {
+        margin-top: 10%;
+        text-align: left;
+        color: black;
+    }
+    .botonParaMenuDesplegable:hover .contenidoParaDesplegable {
+        display: flex;
+        flex-direction: column;
+    }
+    .iconoEnMenuDesplegable {
+        font-size: x-large;
+    }
+}
+@media only screen and (max-width: 359px) {
+    .innerHeader {
+        grid-template-columns: 1fr 15fr 15fr 20fr;
+    }
+    .menuParaPantallasNormales {
+        display: none;
+    }    
+    .menuDesplegableParaPantallasChicas {   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .botonParaMenuDesplegable {
+        border-radius: 10px;
+        width: 50%;
+        height: 50%;
+        background-color: #231F20;
+        color:#C3C9CE;
+        font-family: "gothic";
+        font-size: small;
+    }
+    .contenidoParaDesplegable {
+        display: none;
+        position: absolute;
+        background-color: #B39A93;
+    }
+    .contenidoParaDesplegable a {
+        margin-top: 10%;
+        text-align: left;
+        color: black;
+    }
+    .botonParaMenuDesplegable:hover .contenidoParaDesplegable {
+        display: flex;
+        flex-direction: column;
+    }
+    .iconoEnMenuDesplegable {
+        font-size: medium;
+    }
+    .containerDeBotonEnCarrito button{
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: medium;
+    }
+}
+/*footer*/
+.footerPrimerLineaDeItems {
+    background-color: #966E65;
+    clear: both;
+    height: 100%;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 60% 40%;
+    font-size: larger;
+}
+.footerSeccionDeContacto {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+.footerItems {
+    margin-left: 2%;
+}
+.footerItems p{
+    text-transform: lowercase;
+    margin-left: 2%;
+}
+.containerDeBotonParaIrATienda{
+    @extend .centrarHijosConFlex;
+}
+.botonParaIrATienda {
+    width: 50%;
+    height: 50%;
+    background-color: #231F20;
+    border-radius: 50px;
+    font-family: "constantia";
+    font-size: xx-large;
+    cursor: pointer;
+}
+.informacionDeContacto {
+    text-transform: uppercase;
+    font-family: "constantia", sans-serif;
+    list-style-type: none;
+    font-size: larger;
+}
+.contactoTitulo {
+    font-size: xx-large;
+    font-weight: 500;
+    color:#C3C9CE;
+}
+.itemDeFooter {
+    display: flex;
+    flex-direction: column;
+}
+.itemDeFooter div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.itemDeFooter div p{
+    display: inline;
+    width:fit-content;
+}
+.containerDeIconoEnFooter {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    margin-left: 4%;
+}
+.iconoEnFooter {
+    @extend .contenerImagenDefault;
+}
+.segundaLineaDeItems {
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+.websiteContact {
+    font-family: "constantia", sans-serif;
+    list-style-type: none;
+    font-size: larger;
+    display: grid;
+    grid-template-columns: 5fr 10fr 20fr 10fr;
+}
+.aclaracionEnFooter{
+    text-align: end;
+    width: 100% !important;
+    margin-right: 4%;
+}
+
+@mixin hacerFooterResponsive($fontSizeGeneralDeFooter, $fontSizeDeInfo, $fontSizeDeContactoTitulo, $gridTemplateDeContacto, $fontSizeDeContactoWeb) {
+    .footerSeccionDeContacto {
+        font-size: $fontSizeGeneralDeFooter;
+    }
+    .informacionDeContacto {
+        font-size: $fontSizeDeInfo;
+    }
+    .contactoTitulo {
+        font-size: $fontSizeDeContactoTitulo;
+    }
+    .containerDeBotonParaIrATienda {
+        display: none;
+    }
+    .websiteContact {
+        grid-template-columns: $gridTemplateDeContacto;
+        font-size: $fontSizeDeContactoWeb;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    @include hacerFooterResponsive(50%, large, x-large,5fr 10fr 20fr 17fr, medium);
+}
+@media only screen and (min-width: 466px) and (max-width: 600px) {
+    @include hacerFooterResponsive(50%, large, x-large,5fr 5fr 14fr 17fr, medium);
+}
+@media only screen and (min-width: 360px) and (max-width: 465px) {
+    @include hacerFooterResponsive(60%, larger, large, 5fr 0fr 15fr 17fr, small);
+}
+@media only screen and (max-width: 359px) {
+    @include hacerFooterResponsive(60%, larger, large, 5fr 0fr 15fr 17fr, x-small);
+}
+
+/*Pantalla de carga*/
+.pantallaDeCarga {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow:hidden; 
+    top:0; 
+    left:0;
+    z-index: 2;
+    background-color: #966E65;
+    @extend .centrarHijosConFlex;
+    color: #C3C9CE;
+    font-size: larger;
+    font-family: "constantia";
+}
+.spinner-border.text-primary {
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.mensajeDeCarga {
+    padding-right: 6px;
+}

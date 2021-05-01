@@ -1,0 +1,219 @@
+
+/*Tienda*/
+.bannerDeProductoComprado {
+    display: none;
+    width: 30%;
+    border-radius: 20px;
+    margin-right: 2%;
+    background-color: #B39A93;
+    color: #231F20;
+    height: 6%;
+    font-family: "constantia";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: larger;
+    z-index: 3;
+    bottom: 5%;
+    right: 3%;
+    text-align: center;
+}
+.containerDeBanner {
+    height: 100%;
+    width: 100%;
+    @extend .centrarHijosConFlex;
+}
+.containerDeBanner p{
+    margin: 0;
+}
+#productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.containerDeCartaDeProducto {
+    width: 33%;
+    margin-bottom: 4%;
+}
+.cartaDeProducto {
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.productosColumna1 {
+    margin-left: 12%;
+    margin-right: 10%;
+}
+.productosColumna2 {
+    margin-right: 12%;
+}
+.containerDeImagenEnTienda {
+    @extend .centrarHijosConFlex;
+}
+.productoImagenEnTienda {
+    margin-top: 1%;
+    @extend .contenerImagenDefault;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 10px;
+}
+.containerDeTextoEnTarjeta {
+    height: 60%;
+}
+.containerDeNombreDeProducto{
+    height: 40%;
+    @extend .centrarHijosConFlex;
+    font-family: "constantia";
+    color: #231F20
+}
+.card-text {
+    font-family: "constantia";
+    font-size: larger;
+    color: #231F20
+}
+.botonDeAgregarAlCarrito {
+    background-color: #966E65;
+    color: #C3C9CE;
+    font-family: 'constantia';
+    font-size: larger;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 1px #231F20;
+    margin: 2%;
+    text-align: center;
+}
+.prouctoPrecioEnTienda{
+    color: black;
+}
+.containerDeBotonParaExpandirProducto {
+    display: inline;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+}
+.botonParaVerDetallesDelProducto {
+    background-color: #966E65;
+    @extend .centrarHijosConFlex;
+    z-index: 2;
+    height: 100%;
+    width: 50px;
+    padding: 0;
+    border: 0;
+    padding: 10px;
+    box-shadow: 2px 2px 3px #231F20;
+}
+.containerDeBotonesParaCompra {
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 23% 18% 18% 18% 23%;
+    width: 100%;
+    margin-top: 4%;
+    border-radius: 0;
+}
+.containerDeBotonesParaCompra button {
+    background-color: #966E65;
+    @extend .centrarHijosConFlex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    padding: 10px;
+    color: #231F20;
+    box-shadow: 5px 5px 1px #231F20;
+}
+.containerDeBotonesParaCompra button i {
+    font-size: x-large;
+}
+.cantidadDeProductoEnCarrito {
+    @extend .centrarHijosConFlex;
+    box-shadow: 5px 5px 1px #231F20;
+    background-color: #C3C9CE;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    font-size: larger;
+    font-family: "constantia";
+    font-weight:200;
+}
+.bannerDeComprasEnElCarrito {
+    width: 25%;
+    border-radius: 20px;
+    margin-right: 2%;
+    display: none;
+    background-color: #B39A93;
+    color: #231F20;
+    height: 6%;
+    font-family: "constantia";
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    font-size: larger;
+    text-align: center;
+}
+.details {
+    border: 1.5px solid grey;
+    color: #212121;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px #212121
+}
+.card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+@mixin hacerTiendaResponsive($widthDeCartaDeProducto, $widthDeBannerDeProductoComprado) {
+    #productos {
+        display: block;
+    }
+    .containerDeCartaDeProducto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .cartaDeProducto {
+        width: $widthDeCartaDeProducto;
+    }
+    .productosColumna1 {
+        margin: 0;
+        padding-bottom: 6%;
+    }
+    .productosColumna2 {
+        margin: 0;
+        padding-bottom: 6%;
+    }
+    .bannerDeComprasEnElCarrito {
+        font-size: medium;
+    }
+    .bannerDeProductoComprado {
+        font-size: small;
+        @if ($widthDeBannerDeProductoComprado != undefined) {
+            width: $widthDeBannerDeProductoComprado;
+        }
+    }
+}
+@media only screen and (min-width: 770px) and (max-width: 1130px) {
+    @include hacerTiendaResponsive(100%, undefined);
+}
+@media only screen and (min-width: 421px) and (max-width: 770px) {
+    @include hacerTiendaResponsive(70%, 45%);
+    .bannerDeComprasEnElCarrito {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 420px){
+    @include hacerTiendaResponsive(90%, 55%);
+    .bannerDeComprasEnElCarrito {
+        width: 43%;
+        font-size: small;
+    }
+    .containerDeBotonesParaCompra {
+        grid-template-columns: 11% 26% 26% 26% 11%;
+    }
+    
+}
