@@ -4,7 +4,7 @@
 /*En caso de no tener liveServer, los productos se obtienen de otra manera*/
 function instanciarProductosYCarrito() {
     let listaDeProductos = [];
-    $.getJSON("data/productos.json", (productosEnJSON) => {
+    $.getJSON("../data/productos.json", (productosEnJSON) => {
             productosNoInstanciados = productosEnJSON;
             for (let i = 0; i < productosNoInstanciados.length; i++) {
                 listaDeProductos.push(new Productos(productosNoInstanciados[i].nombre, productosNoInstanciados[i].precio, productosNoInstanciados[i].codigoDeProducto, productosNoInstanciados[i].imagen));

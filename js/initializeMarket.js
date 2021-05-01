@@ -199,7 +199,7 @@ class Carrito {
         $("#productos").append(`<section id="sectionOfProducto${producto.codigoDeProducto}" class="containerDeCartaDeProducto container-fluid ${claseDeSeccion}"> 
                                     <div class="card cartaDeProducto"> 
                                         <div class="containerDeImagenEnTienda">
-                                            <img class="productoImagenEnTienda img-thumbnail" src="${producto.getImageFile()}">
+                                            <img class="productoImagenEnTienda img-thumbnail" src="../${producto.getImageFile()}">
                                         </div>
                                         <div class="containerDeBotonParaExpandirProducto">
                                             <button id="botonParaVerDetallesDeProducto${producto.codigoDeProducto}" class="btn px-auto botonParaVerDetallesDelProducto"><i class="bi bi-arrows-angle-expand"></i></button>
@@ -311,7 +311,7 @@ class Carrito {
                     <tr id="productoDeCodigo${productoParaAgregar.codigoDeProducto}EnCarrito">
                       <th class="border-0">
                         <div>
-                          <img src="${productoParaAgregar.getImageFile()}" class="img-fluid rounded shadow-sm imagenEnCarrito">
+                          <img src="../${productoParaAgregar.getImageFile()}" class="img-fluid rounded shadow-sm imagenEnCarrito">
                           <div class="ml-3 d-inline-block align-middle">
                             <h5 class="mb-0 nombreDeProductos">${productoParaAgregar.nombre}</h5>
                           </div>
