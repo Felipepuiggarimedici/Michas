@@ -52,23 +52,19 @@ p{
     display: block;
     background-color: #966E65;
     opacity: 0.8;
-}
-.innerHeader {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 6fr 15fr 32fr;
+    .innerHeader {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 6fr 15fr 32fr;
+    }
 }
 .containerDeLogoEnHeader {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .centrarHijosConFlex;
 }
 .logoEnHeader {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    @extend .contenerImagenDefault;
     margin-left: 4%;
 }
 .listForNavBar {
@@ -81,23 +77,21 @@ p{
     text-align: center;
     padding: 17px 21px;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend .centrarHijosConFlex;
     font-family: "constantia";
     font-size: larger;
     width: 26%;
-}
-.headerLinks a{
-    text-decoration: none;
-    color: #C3C9CE;
-    font-size: 140%;
-}
-.headerLinks a:hover{
-    text-decoration: underline;
-}
-.headerLinks a i {
-    font-size: 180%;
+    a {
+        text-decoration: none;
+        color: #C3C9CE;
+        font-size: 140%;
+        i {
+            font-size: 180%; 
+        }
+    }
+    a:hover{
+        text-decoration: underline;
+    }
 }
 .menuDesplegableParaPantallasChicas {
     display: none;
@@ -106,11 +100,13 @@ p{
     display: none;
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .innerHeader {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
+    .defaultHeader {
+        .innerHeader {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
     .logoEnHeader {
         display: none;
@@ -123,9 +119,11 @@ p{
         margin-right: 7%;
     }
 }   
-@media only screen and (min-width: 360px) and (max-width: 600px) {
-    .innerHeader {
-        grid-template-columns: 1fr 15fr 15fr 20fr;
+@media only screen and (min-width: 410px) and (max-width: 600px) {
+    .defaultHeader {
+        .innerHeader {
+            grid-template-columns: 1fr 15fr 15fr 20fr;
+        }
     }
     .menuParaPantallasNormales {
         display: none;
@@ -162,9 +160,11 @@ p{
         font-size: x-large;
     }
 }
-@media only screen and (max-width: 359px) {
-    .innerHeader {
-        grid-template-columns: 1fr 15fr 15fr 20fr;
+@media only screen and (max-width: 409px) {
+    .defaultHeader {
+        .innerHeader {
+            grid-template-columns: 1fr 15fr 15fr 20fr;
+        }
     }
     .menuParaPantallasNormales {
         display: none;
@@ -335,12 +335,12 @@ p{
     color: #C3C9CE;
     font-size: larger;
     font-family: "constantia";
-}
-.spinner-border.text-primary {
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-}
-.mensajeDeCarga {
-    padding-right: 6px;
+    .spinner-border.text-primary {
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+    }
+    .mensajeDeCarga {
+        padding-right: 6px;
+    }
 }
