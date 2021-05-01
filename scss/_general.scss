@@ -328,7 +328,7 @@ p{
     @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, 55%);
 }
 @media only screen and (max-width: 287px) {
-    @include hacerFooterResponsive(60%, larger, large, 2fr 1fr 15fr 17fr, 40%);
+    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 14fr, 40%);
 }
 
 /*Pantalla de carga*/

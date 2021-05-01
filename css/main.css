@@ -333,7 +333,7 @@ p {
     margin-right: 5%;
     margin-left: 2%; }
   .websiteContact {
-    grid-template-columns: 2fr 1fr 15fr 17fr;
+    grid-template-columns: 5fr 1fr 15fr 14fr;
     font-size: 40%; } }
 
 /*Pantalla de carga*/
