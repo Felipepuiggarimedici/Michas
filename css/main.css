@@ -304,7 +304,7 @@ p {
     grid-template-columns: 5fr 1fr 15fr 17fr;
     font-size: 80%; } }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (min-width: 288px) and (max-width: 380px) {
   .footerSeccionDeContacto {
     font-size: 60%; }
   .informacionDeContacto {
@@ -319,6 +319,22 @@ p {
   .websiteContact {
     grid-template-columns: 5fr 1fr 15fr 17fr;
     font-size: 55%; } }
+
+@media only screen and (max-width: 287px) {
+  .footerSeccionDeContacto {
+    font-size: 60%; }
+  .informacionDeContacto {
+    font-size: larger; }
+  .contactoTitulo {
+    font-size: large; }
+  .containerDeBotonParaIrATienda {
+    display: none; }
+  .websiteContact {
+    margin-right: 5%;
+    margin-left: 2%; }
+  .websiteContact {
+    grid-template-columns: 2fr 1fr 15fr 17fr;
+    font-size: 40%; } }
 
 /*Pantalla de carga*/
 .pantallaDeCarga {
