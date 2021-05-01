@@ -147,7 +147,7 @@ p {
   .iconoEnMenuDesplegable {
     font-size: x-large; } }
 
-@media only screen and (max-width: 409px) {
+@media only screen and (min-width: 279px) and (max-width: 409px) {
   .defaultHeader .innerHeader {
     grid-template-columns: 1fr 15fr 15fr 20fr; }
   .menuParaPantallasNormales {
@@ -169,6 +169,42 @@ p {
     position: absolute;
     background-color: #B39A93;
     width: 12ch; }
+  .contenidoParaDesplegable a {
+    margin-top: 10%;
+    text-align: left;
+    color: black; }
+  .botonParaMenuDesplegable:hover .contenidoParaDesplegable {
+    display: flex;
+    flex-direction: column; }
+  .iconoEnMenuDesplegable {
+    font-size: medium; }
+  .containerDeBotonEnCarrito button {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: medium; } }
+
+@media only screen and (max-width: 278px) {
+  .defaultHeader .innerHeader {
+    grid-template-columns: 1fr 15fr 15fr 20fr; }
+  .menuParaPantallasNormales {
+    display: none; }
+  .menuDesplegableParaPantallasChicas {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .botonParaMenuDesplegable {
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    background-color: #231F20;
+    color: #C3C9CE;
+    font-family: "gothic";
+    font-size: small; }
+  .contenidoParaDesplegable {
+    display: none;
+    position: absolute;
+    background-color: #B39A93;
+    width: 8ch; }
   .contenidoParaDesplegable a {
     margin-top: 10%;
     text-align: left;
