@@ -304,15 +304,21 @@ p{
         display: none;
     }
     .websiteContact {
+        margin : {
+            right: 5%;
+            left: 5%;
+        }
+    }
+    .websiteContact {
         grid-template-columns: $gridTemplateDeContacto;
         font-size: $fontSizeDeContactoWeb;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    @include hacerFooterResponsive(50%, large, x-large,5fr 10fr 20fr 17fr, medium);
+@media only screen and (min-width: 601px) and (max-width: 910px) {
+    @include hacerFooterResponsive(50%, large, x-large,5fr 7fr 20fr 17fr, medium);
 }
 @media only screen and (min-width: 466px) and (max-width: 600px) {
-    @include hacerFooterResponsive(50%, large, x-large,5fr 5fr 14fr 17fr, medium);
+    @include hacerFooterResponsive(50%, large, x-large,5fr 4fr 14fr 17fr, medium);
 }
 @media only screen and (min-width: 360px) and (max-width: 465px) {
     @include hacerFooterResponsive(60%, larger, large, 5fr 0fr 15fr 17fr, small);

@@ -258,7 +258,7 @@ p {
   width: 100% !important;
   margin-right: 4%; }
 
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+@media only screen and (min-width: 601px) and (max-width: 910px) {
   .footerSeccionDeContacto {
     font-size: 50%; }
   .informacionDeContacto {
@@ -268,7 +268,10 @@ p {
   .containerDeBotonParaIrATienda {
     display: none; }
   .websiteContact {
-    grid-template-columns: 5fr 10fr 20fr 17fr;
+    margin-right: 5%;
+    margin-left: 5%; }
+  .websiteContact {
+    grid-template-columns: 5fr 7fr 20fr 17fr;
     font-size: medium; } }
 
 @media only screen and (min-width: 466px) and (max-width: 600px) {
@@ -281,7 +284,10 @@ p {
   .containerDeBotonParaIrATienda {
     display: none; }
   .websiteContact {
-    grid-template-columns: 5fr 5fr 14fr 17fr;
+    margin-right: 5%;
+    margin-left: 5%; }
+  .websiteContact {
+    grid-template-columns: 5fr 4fr 14fr 17fr;
     font-size: medium; } }
 
 @media only screen and (min-width: 360px) and (max-width: 465px) {
@@ -293,6 +299,9 @@ p {
     font-size: large; }
   .containerDeBotonParaIrATienda {
     display: none; }
+  .websiteContact {
+    margin-right: 5%;
+    margin-left: 5%; }
   .websiteContact {
     grid-template-columns: 5fr 0fr 15fr 17fr;
     font-size: small; } }
@@ -306,6 +315,9 @@ p {
     font-size: large; }
   .containerDeBotonParaIrATienda {
     display: none; }
+  .websiteContact {
+    margin-right: 5%;
+    margin-left: 5%; }
   .websiteContact {
     grid-template-columns: 5fr 0fr 15fr 17fr;
     font-size: x-small; } }
