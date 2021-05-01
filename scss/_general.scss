@@ -254,15 +254,15 @@ p{
 .itemDeFooter {
     display: flex;
     flex-direction: column;
-}
-.itemDeFooter div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.itemDeFooter div p{
-    display: inline;
-    width:fit-content;
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p{
+            display: inline;
+            width:fit-content;
+        }
+    }
 }
 .containerDeIconoEnFooter {
     display: inline;
@@ -311,6 +311,7 @@ p{
     }
     .websiteContact {
         grid-template-columns: $gridTemplateDeContacto;
+        
         font-size: $fontSizeDeContactoWeb;
     }
 }
@@ -318,13 +319,13 @@ p{
     @include hacerFooterResponsive(50%, large, x-large,5fr 7fr 20fr 17fr, medium);
 }
 @media only screen and (min-width: 466px) and (max-width: 600px) {
-    @include hacerFooterResponsive(50%, large, x-large,5fr 4fr 14fr 17fr, medium);
+    @include hacerFooterResponsive(50%, large, x-large,5fr 4fr 14fr 17fr, small);
 }
 @media only screen and (min-width: 360px) and (max-width: 465px) {
-    @include hacerFooterResponsive(60%, larger, large, 5fr 0fr 15fr 17fr, small);
+    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, 60%);
 }
 @media only screen and (max-width: 359px) {
-    @include hacerFooterResponsive(60%, larger, large, 5fr 0fr 15fr 17fr, x-small);
+    @include hacerFooterResponsive(60%, larger, large, 5fr 1fr 15fr 17fr, x-small);
 }
 
 /*Pantalla de carga*/

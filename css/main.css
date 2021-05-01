@@ -226,15 +226,13 @@ p {
 .itemDeFooter {
   display: flex;
   flex-direction: column; }
-
-.itemDeFooter div {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
-.itemDeFooter div p {
-  display: inline;
-  width: fit-content; }
+  .itemDeFooter div {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .itemDeFooter div p {
+      display: inline;
+      width: fit-content; }
 
 .containerDeIconoEnFooter {
   display: inline;
@@ -288,7 +286,7 @@ p {
     margin-left: 5%; }
   .websiteContact {
     grid-template-columns: 5fr 4fr 14fr 17fr;
-    font-size: medium; } }
+    font-size: small; } }
 
 @media only screen and (min-width: 360px) and (max-width: 465px) {
   .footerSeccionDeContacto {
@@ -303,8 +301,8 @@ p {
     margin-right: 5%;
     margin-left: 5%; }
   .websiteContact {
-    grid-template-columns: 5fr 0fr 15fr 17fr;
-    font-size: small; } }
+    grid-template-columns: 5fr 1fr 15fr 17fr;
+    font-size: 60%; } }
 
 @media only screen and (max-width: 359px) {
   .footerSeccionDeContacto {
@@ -319,7 +317,7 @@ p {
     margin-right: 5%;
     margin-left: 5%; }
   .websiteContact {
-    grid-template-columns: 5fr 0fr 15fr 17fr;
+    grid-template-columns: 5fr 1fr 15fr 17fr;
     font-size: x-small; } }
 
 /*Pantalla de carga*/
