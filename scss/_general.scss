@@ -95,6 +95,7 @@ p{
 }
 .menuDesplegableParaPantallasChicas {
     display: none;
+    z-index: 100;
 }
 .contenidoParaDesplegable {
     display: none;
@@ -191,7 +192,7 @@ p{
         width: 12ch;
     }
     .contenidoParaDesplegable a {
-        margin-top: 10%;
+        margin-top: 7%;
         text-align: left;
         color: black;
     }
@@ -229,16 +230,17 @@ p{
         background-color: #231F20;
         color:#C3C9CE;
         font-family: "gothic";
-        font-size: small;
+        font-size: x-small;
     }
     .contenidoParaDesplegable {
         display: none;
         position: absolute;
         background-color: #B39A93;
-        width: 8ch;
+        width: 12ch;
+        font-size: small;
     }
     .contenidoParaDesplegable a {
-        margin-top: 10%;
+        margin-top: 1%;
         text-align: left;
         color: black;
     }
