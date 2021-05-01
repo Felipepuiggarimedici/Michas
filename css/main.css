@@ -136,9 +136,9 @@ p {
     display: none;
     position: absolute;
     background-color: #B39A93;
-    width: 50%; }
+    width: 18ch; }
   .contenidoParaDesplegable a {
-    margin-top: 2%;
+    margin-top: 10%;
     text-align: left;
     color: black; }
   .botonParaMenuDesplegable:hover .contenidoParaDesplegable {
