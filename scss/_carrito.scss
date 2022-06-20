@@ -1,0 +1,187 @@
+/*carrito*/
+.containerParaCarrito {
+    margin-bottom: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #966E65;
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-radius: .25rem;
+    padding: 3rem;
+}
+#tablaDeCarrito {
+    @extend .centrarHijosConFlex;
+    padding-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.table {
+    background-color: #B39A93;
+    font-family: "constantia";
+}
+#casillaParaTotalAPagar {
+    width: 50%;
+}
+.headerDeItemsEnCarrito {
+    border: 0 !important;
+    background-color: white;
+}
+.textoEnHeaderDelCarrito {
+    padding: .5rem;
+    padding-left: 0;
+}
+.imagenEnCarrito {
+    width: 70px;
+}
+tr {
+    font-size: larger;
+}
+tbody {
+    font-size: larger;
+}
+.botonParaRemoverDelCarrito {
+    background-color: #231F20;
+    border-radius: 5px;
+}
+.iconoParaPantallasChicas  {
+    display: none;
+}
+#seccionDeForm {
+    display: none;
+}
+#containerDeFormParaProcessarLaCompra {
+    @extend .centrarHijosConFlex;
+    width: 100%;
+    font-family: "constantia";
+    color:#C3C9CE;
+    font-size: larger;
+    padding-bottom: 3%;
+}
+#formParaProcessarLaCompra {
+    width: 60%;
+}
+.botonEnForm {
+    width: 20%;
+    height: 50%;
+    background-color: #C3C9CE;
+}
+#mensajeDeFormularioEnviado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "constantia";
+    padding-bottom: 3%;
+    font-size: larger;
+}
+.containerDeTextoDeRespuestaAlFormulario {
+    display: none;
+    width: 60%;
+}
+.casillaParaTotalAPagarPrecio {
+    padding-bottom: 5%;
+}
+.redAlertDeNombre, .redAlertDeMail {
+    display: none;
+    color: red;
+    text-decoration: underline;
+    font-family: "constantia";
+    font-weight: 100;
+}
+.swal2-container {
+    font-family: "constantia";
+    color: #231F20;
+}
+.swal2-icon, .swal2-success {
+    color: #966E65 !important;
+    border-color: #966E65 !important;
+    animation-play-state: running;
+}
+
+@mixin hacerResponsiveCarrito($fontSizeDeNombresDeProductos, $fontSizeDeheaderDeTabla) {
+    .headerDeItemsEnCarrito {
+        font-size: $fontSizeDeheaderDeTabla;
+        width: 170px;
+    }
+    .botonParaRemoverDelCarrito {
+        font-size: small;
+    }
+    tbody tr .containerDeBotonEnCarrito {
+        width: 130px;
+    }
+    .nombreDeProductos {
+        font-size: $fontSizeDeNombresDeProductos;
+    }
+    .botonEnForm {
+        width: 50%;
+    }
+}
+@mixin hacerMasResponsiveElCarrito($tituloDeFormParaProcesarLaCompra, $fontSizeDePrecio) {
+    .imagenEnCarrito {
+        display: none;
+    }
+    .table th, .table tr{
+        padding: 0;
+    }
+    .precioDeProductoEnCarrito, .unidadesDeCadaProducto {
+        font-size: $fontSizeDePrecio;
+    }
+    @if ($tituloDeFormParaProcesarLaCompra == x-large) {
+        #formParaProcessarLaCompra h2 {
+            font-size: x-large;
+        }
+    }
+}
+@media only screen and (min-width: 570px) and (max-width: 700px) {
+    @include hacerResponsiveCarrito(large, medium);
+}
+@media only screen and (min-width: 515px) and (max-width: 569px) {
+    @include hacerResponsiveCarrito(small,small);
+    @include hacerMasResponsiveElCarrito(x-large, medium);
+}
+@media only screen and (min-width: 460px) and (max-width: 514px) {
+    @include hacerResponsiveCarrito(small,small);
+    @include hacerMasResponsiveElCarrito(x-large, small);
+}
+@media only screen and (min-width: 366px) and (max-width: 459px) {
+    @include hacerResponsiveCarrito(small,small);
+    @include hacerMasResponsiveElCarrito("undefined", small);
+    .containerParaCarrito {
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 465px) {
+    .iconoParaPantallasChicas {
+        display: block;
+        font-size: large;
+        text-align: center;
+    }
+    .textoEnCarritoEnHeader {
+        display: none;
+    }
+    @include hacerResponsiveCarrito(small,small);
+    @include hacerMasResponsiveElCarrito(x-large, small);
+    .containerParaCarrito {
+        padding: 10px;
+    }
+    .headerDeCantidad {
+        width: 10%;
+    }
+    .divDeCantidad {
+        padding-right: 0;
+    }
+    #formParaProcessarLaCompra h2, .agradecimiento {
+        font-size: larger;
+    }
+    .botonEnForm {
+        font-size: smaller;
+    }
+    .formInput::placeholder {
+        font-size: smaller;
+    }
+    .containerDeBotonEnCarrito button{
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: medium;
+    }
+}

@@ -1,0 +1,79 @@
+/*pagina acerca de*/
+#acercaDeNosotros {
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo titulo titulo margen margen margen"
+        "texto texto texto texto imagen imagen imagen";
+    grid-template-rows: 20vh 70vh;
+}
+#acercaDeNosotrosTitulo {
+    grid-area: titulo;
+    @extend .centrarHijosConFlex;
+}
+#textoDeMichas {
+    @extend .centrarHijosConFlex;
+    margin-left: 4%;
+    grid-area: texto;
+    font-family: "constantia";
+    font-size: xx-large;
+}
+#imagenDeMichas {
+    @extend .centrarHijosConFlex;
+    grid-area: imagen;
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.containerDeIconoParaVolverATienda {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+}
+
+@mixin hacerResponsiveAcercaDe($gridTemplateArea, $fontSize, $fontSizeDeDescripcion) {
+    #acercaDeNosotros {
+        grid-template-rows: 10% 90%;
+        @if $gridTemplateArea != undefined {
+            grid-template-areas: $gridTemplateArea;
+        }
+    }
+    #acercaDeNosotrosTitulo {
+        padding-top: 10%;
+    }
+    #acercaDeNosotrosTitulo h1 {
+        @if $fontSize != undefined {
+            font-size: $fontSize;
+        }
+    }
+    #descripcionDelNegocio {
+        font-size: $fontSizeDeDescripcion;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+    $gridTemplateArea: undefined;
+    $fontSize: undefined;
+    $fontSizeDeDescripcion: x-large; 
+    @include hacerResponsiveAcercaDe($gridTemplateArea, $fontSize, $fontSizeDeDescripcion);
+}
+@media only screen and (min-width: 390px) and (max-width: 599px) {
+    $gridTemplateArea: "titulo titulo titulo titulo titulo titulo titulo"
+                        "texto texto texto texto imagen imagen imagen";
+    $fontSize: undefined;
+    $fontSizeDeDescripcion: large; 
+    @include hacerResponsiveAcercaDe($gridTemplateArea, $fontSize, $fontSizeDeDescripcion);
+}
+@media only screen and (min-width: 280px) and (max-width: 389px) {
+    $gridTemplateArea: "titulo titulo titulo titulo titulo titulo titulo"
+                        "texto texto texto texto imagen imagen imagen";
+    $fontSize: 140%;
+    $fontSizeDeDescripcion: small; 
+    @include hacerResponsiveAcercaDe($gridTemplateArea, $fontSize, $fontSizeDeDescripcion);
+}
+@media only screen and (max-width: 279px) {
+    $gridTemplateArea: "titulo titulo titulo titulo titulo titulo titulo"
+                        "texto texto texto texto imagen imagen imagen";
+    $fontSize: 100%;
+    $fontSizeDeDescripcion: xx-small; 
+    @include hacerResponsiveAcercaDe($gridTemplateArea, $fontSize, $fontSizeDeDescripcion);
+}

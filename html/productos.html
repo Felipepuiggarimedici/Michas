@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Descripción" content="Este es un e-commerce de reposteria"/>
+        <meta name="autor" content="Felipe Puiggari Medici"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Productos</title>
+    </head>
+    <body class="preload">
+        <header class="defaultHeader">
+            <nav class="innerHeader">
+                <div class="blankSpaceEnHeader"></div>
+                <div class="containerDeLogoEnHeader">
+                    <a href="../index.html">
+                        <img class="logoEnHeader" src="../imagenes/logo.png">
+                    </a>
+                </div>
+                <div class="blankSpaceEnHeader"></div>
+                <div class="menuParaPantallasNormales">
+                    <ul class="listForNavBar">
+                        <li class="headerLinks"><a href="carrito.html"><i class="bi bi-cart2"></i></a></li>
+                        <li class="headerLinks"><a href="tienda.html">Tienda</a></li>
+                        <li class="headerLinks"><a href="acercaDe.html">Acerca de nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="menuDesplegableParaPantallasChicas">
+                    <button class="botonParaMenuDesplegable">
+                        <i class="bi bi-list iconoEnMenuDesplegable"></i>
+                        <div class="contenidoParaDesplegable">
+                            <a href="tienda.html">Tienda</a>
+                            <a href="carrito.html">Carrito</a>
+                            <a class="mb-2" href="acercaDe.html">Acerca de nosotros</a>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!--Titulo de la pagina, creado mediante javascript dependiendo del producto seleccionado en tienda-->
+            <section class="titulo tituloEnProducto">
+            </section>
+            <!--Container para la imagen del producto y para el boton de volver a tienda-->
+            <section class="containerDeProducto">
+                <div class="card containerDeImagenDeProducto">
+                    <div class="containerDeIconoParaVolverATienda">
+                        <button class="botonParaVolverATienda btn px-auto"><i class="bi bi-arrows-angle-contract"></i></button>
+                    </div>
+                </div>
+            </section>
+            <!--container para el boton de compras y el precio del producto-->
+            <section class="itemsDebajoDeProducto">
+                <div class="espacio"></div>
+                <div>
+                    <div class="containerDeBotonesParaCompra containerDeBotonesParaCompraEnProducto">
+                        <div class="blankSpace"></div>
+                        <button class="btn botonParaEditarCarrito px-auto botonParaAgregarAlCarrito"><i class="bi bi-cart-plus"></i></button>
+                        <div class="containerDeCantidadDeProductoEnCarrito">
+                            <p class="cantidadDeProductoEnCarrito"></p>
+                        </div>
+                        <div>
+                            <button class="btn botonParaEditarCarrito px-auto botonParaRemoverDelCarrito"><i class="bi bi-cart-x"></i></button>
+                        </div>
+                        <div class="blankSpace"></div>
+                    </div>
+                </div>
+                <div class="espacio"></div>
+                <div class="precioEnProductoExpandido">
+                </div>
+                <div class="espacio"></div>
+            </section>
+            <!--banner que muestra cuando se agregan cosas al carrito-->
+            <section class="bannerDeProductoComprado">
+            </section>
+            <!--banner que muestra cuando hay cosas en el carrito-->
+            <section class="bannerDeComprasEnElCarrito">
+                <div class="containerDeBanner">
+                    <p> Tienes compras en el carrito</p>
+                </div>
+            </section>
+            <!--Pantalla de carga que se mostrara solo mientras carga la pagina-->
+            <section class="pantallaDeCarga">
+                <div class="containerParaSpinner">
+                    <strong class="mensajeDeCarga">Cargando...</strong>
+                    <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                </div>
+            </section>   
+        </main>
+        <footer>
+            <section class="footerPrimerLineaDeItems">
+                <section class="footerSeccionDeContacto textoClaro">
+                    <h3 class="contactoTitulo informacionDeContacto">Contactanos:</h3>
+                    <ul class="footerItems informacionDeContacto">
+                        <li class="textoClaro itemDeFooter">Mail:
+                            <div>
+                                <p class="textoClaro">mail@gmail.com</p>
+                                <div class="containerDeIconoEnFooter">
+                                    <img class="iconoEnFooter" src="../icons/mail.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="textoClaro itemDeFooter">Instagram:
+                            <div>
+                                <p class="textoClaro">instagramProfile</p>
+                                <div class="containerDeIconoEnFooter">
+                                    <img class="iconoEnFooter" src="../icons/instagram.png">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="blankSpaceEnFooter">
+                </section>
+            </section>
+            <section class="segundaLineaDeItems">
+                <div class="websiteContact itemDeFooter">
+                    <div class="copyright itemDeFooter">
+                        <div class="containerDeIconoEnFooter">
+                            <img class="iconoEnFooter" src="../icons/copyright.png">
+                        </div>
+                        <p class="textoClaro">Micha's</p>
+                    </div>
+                    <div class="blankSpaceEnFooter"></div>
+                    <div class="websiteCreator">
+                        <p class="textoClaro aclaracionEnFooter">Website creada por:</p>
+                    </div>
+                    <div class="websiteCreator">
+                        <p class="textoClaro">Felipe Puiggari Medici</p>
+                        <div class="containerDeIconoEnFooter">
+                            <a href="https://www.linkedin.com/in/felipe-puiggari-medici-248855207"><img class="iconoEnFooter" src="../icons/linkedin.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/initializeMarket.js"></script>
+        <script src="../js/funciones.js"></script>
+        <script src="../js/productosDisponiblesSinJson.js"></script>
+        <script src="../js/productosMain.js"></script>
+    </body>
+</html>
