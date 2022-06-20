@@ -1,5 +1,5 @@
 
 manejarPantallaDeCarga();
 $(".botonParaIrATienda").click(function () {
-    location.href = "../tienda.html";
+    location.href = "../html/tienda.html";
 });
